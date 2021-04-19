@@ -4,7 +4,7 @@ const addresses = {
   WETH: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
   factory: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f', 
   router: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
-  recipient: '0xf11b2fc4f28150517af11c2c456cbe75e976f663'
+  recipient: '0x024db47e1dBe264Ab66d5E234C65e8bEc0D1632b'
 }
 
 const mnemonic = 'your mnemonic here';
