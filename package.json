@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "tstart": "node bot_USWAP.js"
+    "start": "node bot_USWAP.js"
   },
   "keywords": [],
   "author": "",
