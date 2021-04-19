@@ -9,7 +9,7 @@ const addresses = {
 
 const mnemonic = 'your mnemonic here';
 
-const provider = new ethers.providers.WebSocketProvider('Infura websocket url to mainnet');
+const provider = new ethers.providers.WebSocketProvider('Infura websocket url to mainnet'); //адрес провайдера web3
 const wallet = ethers.Wallet.fromMnemonic(mnemonic);
 const account = wallet.connect(provider);
 const factory = new ethers.Contract(
@@ -35,7 +35,7 @@ factory.on('PairCreated', async (token0, token1, pairAddress) => {
     pairAddress: ${pairAddress}
   `);
 
-  //The quote currency needs to be WETH (we will pay with WETH)
+  //The quote currency needs to be ... Валюта котировки должна быть WETH (we will pay with WETH)
   let tokenIn, tokenOut;
   if(token0 === addresses.WETH) {
     tokenIn = token0; 
@@ -47,13 +47,13 @@ factory.on('PairCreated', async (token0, token1, pairAddress) => {
     tokenOut = token0;
   }
 
-  //The quote currency is not WETH
+  //The quote currency is not WETH. Валюта котировки НЕ (WETH)
   if(typeof tokenIn === 'undefined') {
     return;
   }
 
-  //We buy for 0.1 ETH of the new token
-  const amountIn = ethers.utils.parseUnits('0.1', 'ether');
+  //We buy for 0.05 ETH of the new token (покупка на 0.05 ETH)
+  const amountIn = ethers.utils.parseUnits('0.05', 'ether');
   const amounts = await router.getAmountsOut(amountIn, [tokenIn, tokenOut]);
   //Our execution price will be a bit different, we need some flexbility
   const amountOutMin = amounts[1].sub(amounts[1].div(10));
