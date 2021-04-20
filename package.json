@@ -1,8 +1,8 @@
 {
-  "name": "322-uniswap-trading-bot",
+  "name": "3bot_USWAP",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "main": "bot_USWAP.js",
   "directories": {
     "test": "test"
   },
